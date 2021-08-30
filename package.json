@@ -1,0 +1,45 @@
+{
+  "name": "@monorepo-starter/root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "preconstruct dev && manypkg check",
+    "build": "preconstruct build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshleyCheny/monorepo.git"
+  },
+  "keywords": [
+    "monorepo"
+  ],
+  "author": "Ying Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshleyCheny/monorepo/issues"
+  },
+  "homepage": "https://github.com/AshleyCheny/monorepo#readme",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "services/*"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@changesets/cli": "^2.16.0",
+    "@manypkg/cli": "^0.18.0",
+    "@preconstruct/cli": "^2.1.1"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*",
+      "services/*"
+    ]
+  }
+}
